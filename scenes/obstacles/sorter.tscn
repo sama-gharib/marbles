@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://db7mk6yhtthwi"]
+
+[ext_resource type="PackedScene" uid="uid://brl1kbvopr436" path="res://scenes/building_blocks/wall.tscn" id="1_tx8yp"]
+
+[node name="Sorter" type="Node2D"]
+
+[node name="Tip" type="Node2D" parent="."]
+position = Vector2(321, 176)
+scale = Vector2(10, 10)
+
+[node name="Wall" parent="Tip" instance=ExtResource("1_tx8yp")]
+position = Vector2(-6.7, 7.5)
+rotation = -0.785398
+scale = Vector2(20, 1)
+
+[node name="Wall2" parent="Tip" instance=ExtResource("1_tx8yp")]
+position = Vector2(6.7, 7.5)
+rotation = 0.785398
+scale = Vector2(20, 1)
+
+[node name="Tip2" type="Node2D" parent="."]
+position = Vector2(335, 680)
+scale = Vector2(-20.06, -20.06)
+
+[node name="Wall" parent="Tip2" instance=ExtResource("1_tx8yp")]
+position = Vector2(-8.72, 7.5)
+rotation = -0.785398
+scale = Vector2(20, 1)
+
+[node name="Wall2" parent="Tip2" instance=ExtResource("1_tx8yp")]
+position = Vector2(9.005, 7.5)
+rotation = 0.785398
+scale = Vector2(20, 1)

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://da3ybw3y2uotv"]
+
+[ext_resource type="Script" path="res://scripts/roundabout.gd" id="1_qojbc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q55si"]
+radius = 1.0
+
+[node name="Roundabout" type="StaticBody2D"]
+script = ExtResource("1_qojbc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_q55si")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]

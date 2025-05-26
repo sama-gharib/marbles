@@ -1,0 +1,30 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Marbles"
+run/main_scene="res://scenes/marbles.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
+config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=648
+window/size/viewport_height=1152
+window/default_gravity=1.0
+
+[editor]
+
+movie_writer/movie_file="/home/sama/Bureau/Godot/marbles/output.avi"
+
+[physics]
+
+2d/default_gravity=1.0

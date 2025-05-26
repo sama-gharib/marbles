@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://boy3vgq3hils0"]
+
+[ext_resource type="Script" path="res://scripts/scale.gd" id="1_ilyvh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ty45o"]
+size = Vector2(1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ycxv3"]
+size = Vector2(1, 1)
+
+[node name="Scale" type="Node2D"]
+position = Vector2(324, 211)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+script = ExtResource("1_ilyvh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("RectangleShape2D_ty45o")
+
+[node name="Polygon2D" type="Polygon2D" parent="RigidBody2D"]
+polygon = PackedVector2Array(-0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, 0.5)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_ycxv3")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="."]
+node_a = NodePath("../RigidBody2D")
+node_b = NodePath("../StaticBody2D")

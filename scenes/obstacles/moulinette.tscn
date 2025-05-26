@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://b458pqexjbas2"]
+
+[ext_resource type="PackedScene" uid="uid://brl1kbvopr436" path="res://scenes/building_blocks/wall.tscn" id="1_4hn5o"]
+[ext_resource type="PackedScene" uid="uid://424fi0qvgei7" path="res://scenes/building_blocks/cogwheel.tscn" id="2_kyf2d"]
+
+[node name="Moulinette" type="Node2D"]
+
+[node name="Wall" parent="." instance=ExtResource("1_4hn5o")]
+position = Vector2(546, 401)
+rotation = 0.785398
+scale = Vector2(20, 300)
+
+[node name="Wall2" parent="." instance=ExtResource("1_4hn5o")]
+position = Vector2(99, 395)
+rotation = -0.785398
+scale = Vector2(20, 300)
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(326, 652)
+scale = Vector2(100, 100)
+
+[node name="Cogwheel" parent="Node2D" instance=ExtResource("2_kyf2d")]
+position = Vector2(1.25, 0)
+constant_angular_velocity = 0.0
+tooth_count = 7
+rotation_speed = -0.5
+
+[node name="Cogwheel2" parent="Node2D" instance=ExtResource("2_kyf2d")]
+position = Vector2(-1.25, 0)
+constant_angular_velocity = 0.0
+tooth_count = 7

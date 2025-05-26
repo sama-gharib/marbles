@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://nopqv2rk0oxj"]
+
+[ext_resource type="PackedScene" uid="uid://brl1kbvopr436" path="res://scenes/building_blocks/wall.tscn" id="1_2io1s"]
+[ext_resource type="Script" path="res://scripts/map.gd" id="1_f5pkx"]
+[ext_resource type="PackedScene" uid="uid://crgwplxp2paw0" path="res://scenes/last_screen/finish_line.tscn" id="3_xxsre"]
+
+[node name="Map" type="Node2D"]
+script = ExtResource("1_f5pkx")
+
+[node name="LeftBarrier" type="Node2D" parent="."]
+position = Vector2(12, 0)
+scale = Vector2(20, 1152)
+
+[node name="Wall" parent="LeftBarrier" instance=ExtResource("1_2io1s")]
+position = Vector2(-0.5, 0.5)
+
+[node name="RightBarrier" type="Node2D" parent="."]
+position = Vector2(637, 0)
+scale = Vector2(20, 1152)
+
+[node name="Wall" parent="RightBarrier" instance=ExtResource("1_2io1s")]
+position = Vector2(0.5, 0.5)
+
+[node name="Ground" type="Node2D" parent="."]
+position = Vector2(0, 1152)
+
+[node name="FinishLine" parent="Ground" instance=ExtResource("3_xxsre")]

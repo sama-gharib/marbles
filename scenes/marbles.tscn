@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://dusomwojyi8ao"]
+
+[ext_resource type="Script" path="res://scripts/marbles_main.gd" id="1_5se2q"]
+[ext_resource type="PackedScene" uid="uid://dbbfgivpahu4q" path="res://scenes/first_screen/title.tscn" id="2_fghi0"]
+[ext_resource type="PackedScene" uid="uid://bbodnlu1kqhxy" path="res://scenes/marble_camera.tscn" id="2_mbuvy"]
+[ext_resource type="PackedScene" uid="uid://ig5ou07dnnf2" path="res://scenes/first_screen/countdown.tscn" id="3_sj0al"]
+[ext_resource type="PackedScene" uid="uid://nopqv2rk0oxj" path="res://scenes/map.tscn" id="5_2bjyk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1jf0"]
+size = Vector2(1, 1)
+
+[node name="Marbles" type="Node2D"]
+script = ExtResource("1_5se2q")
+marble_count = 200
+
+[node name="Background" type="ParallaxBackground" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="Background"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 651, 0, 651, 1152, 0, 1152)
+
+[node name="SpawnArea" type="Area2D" parent="."]
+position = Vector2(325, 617)
+scale = Vector2(500, 500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpawnArea"]
+shape = SubResource("RectangleShape2D_r1jf0")
+
+[node name="MarbleCamera" parent="." instance=ExtResource("2_mbuvy")]
+
+[node name="Title" parent="." instance=ExtResource("2_fghi0")]
+offset_left = 60.0
+offset_top = 72.0
+offset_right = 607.0
+offset_bottom = 212.0
+text = "[Is set by \"marbles_main.gd\"]"
+
+[node name="Countdown" parent="." instance=ExtResource("3_sj0al")]
+offset_left = 138.0
+offset_top = 527.0
+offset_right = 492.0
+offset_bottom = 737.0
+text = "Go !"
+
+[node name="Players" type="Node2D" parent="."]
+
+[node name="Map" parent="." instance=ExtResource("5_2bjyk")]
+obstacle_count = 10
+
+[connection signal="time_up" from="Countdown" to="." method="start_race"]

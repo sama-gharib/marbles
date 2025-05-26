@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6nyyow7eskbv"]
+
+[ext_resource type="PackedScene" uid="uid://boy3vgq3hils0" path="res://scenes/building_blocks/scale.tscn" id="1_g8c6a"]
+
+[node name="Scales" type="Node2D"]
+
+[node name="Scale" parent="." instance=ExtResource("1_g8c6a")]
+
+[node name="Scale2" parent="." instance=ExtResource("1_g8c6a")]
+position = Vector2(324, 520)
+
+[node name="Scale3" parent="." instance=ExtResource("1_g8c6a")]
+position = Vector2(324, 833)

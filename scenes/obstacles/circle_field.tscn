@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://bb7aolsklegsy"]
+
+[ext_resource type="PackedScene" uid="uid://da3ybw3y2uotv" path="res://scenes/building_blocks/roundabout.tscn" id="1_a73sp"]
+
+[node name="CircleField" type="Node2D"]
+
+[node name="Roundabout" parent="." instance=ExtResource("1_a73sp")]
+position = Vector2(0.44, 165)
+scale = Vector2(161.13, 161.13)
+
+[node name="Roundabout2" parent="." instance=ExtResource("1_a73sp")]
+position = Vector2(646.94, 173)
+scale = Vector2(161.13, 161.13)
+
+[node name="Roundabout3" parent="." instance=ExtResource("1_a73sp")]
+position = Vector2(326, 383)
+scale = Vector2(161.13, 161.13)
+
+[node name="Roundabout4" parent="." instance=ExtResource("1_a73sp")]
+position = Vector2(0.44, 604)
+scale = Vector2(161.13, 161.13)
+
+[node name="Roundabout5" parent="." instance=ExtResource("1_a73sp")]
+position = Vector2(651, 602)
+scale = Vector2(161.13, 161.13)
+
+[node name="Roundabout6" parent="." instance=ExtResource("1_a73sp")]
+position = Vector2(330, 825)
+scale = Vector2(161.13, 161.13)

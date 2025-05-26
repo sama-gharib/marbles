@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://7mqcaiumgphp"]
+
+[ext_resource type="Script" path="res://scripts/marble.gd" id="1_cf7ap"]
+
+[node name="Marble" type="RigidBody2D"]
+mass = 0.1
+script = ExtResource("1_cf7ap")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]

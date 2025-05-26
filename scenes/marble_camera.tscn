@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbodnlu1kqhxy"]
+
+[ext_resource type="Script" path="res://scripts/marble_camera.gd" id="1_yqljt"]
+
+[node name="MarbleCamera" type="Camera2D"]
+position = Vector2(323, 576)
+script = ExtResource("1_yqljt")

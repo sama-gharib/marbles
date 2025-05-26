@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://424fi0qvgei7"]
+
+[ext_resource type="Script" path="res://scripts/cogwheel.gd" id="1_hdfgg"]
+
+[node name="Cogwheel" type="StaticBody2D"]
+constant_angular_velocity = 0.00174533
+script = ExtResource("1_hdfgg")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
