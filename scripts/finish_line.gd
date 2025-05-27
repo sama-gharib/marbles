@@ -11,11 +11,11 @@ func _process(delta: float) -> void:
 		if collision != null and 'get_pseudo' in collision.get_collider() and collision.get_collider() not in self.crossed:
 			var winner = collision.get_collider()
 			self.crossed.append(winner)
-			$Polygon2D.color = winner.color
-			$Confettis.set_color(winner.color)
-			$Confettis2.set_color(winner.color)
-			$Confettis.emitting = true
-			$Confettis2.emitting = true
+			if self.crossed.size() == 1:
+				$Confettis.set_color(winner.color)
+				$Confettis2.set_color(winner.color)
+				$Confettis.emitting = true
+				$Confettis2.emitting = true
 		
 			if crossed.size() == 3:	
 				var new_end_screen = end_screen.instantiate()
