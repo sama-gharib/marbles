@@ -1,0 +1,85 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfyfdk7b7powg"]
+
+[ext_resource type="PackedScene" uid="uid://daj7ib0b40ngm" path="res://scenes/last_screen/podium_item.tscn" id="1_pmkje"]
+[ext_resource type="Script" path="res://scripts/win_screen.gd" id="1_s2gff"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fxkra"]
+font_size = 128
+outline_size = 50
+outline_color = Color(0, 0, 0, 1)
+
+[node name="WinScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s2gff")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 335.0
+offset_top = 111.0
+offset_right = 335.0
+offset_bottom = 286.0
+grow_horizontal = 2
+text = "Winners !"
+label_settings = SubResource("LabelSettings_fxkra")
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 712.0
+offset_top = 404.0
+offset_right = 752.0
+offset_bottom = 444.0
+scale = Vector2(0.5, 0.5)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -256.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="Control/HBoxContainer"]
+layout_mode = 2
+
+[node name="Second" parent="Control/HBoxContainer/Control" instance=ExtResource("1_pmkje")]
+layout_mode = 2
+anchors_preset = 0
+offset_left = -1424.0
+offset_top = 230.0
+offset_right = -912.0
+offset_bottom = 742.0
+scale = Vector2(0.9, 0.9)
+
+[node name="Control2" type="Control" parent="Control/HBoxContainer"]
+layout_mode = 2
+
+[node name="First" parent="Control/HBoxContainer/Control2" instance=ExtResource("1_pmkje")]
+layout_mode = 2
+anchors_preset = 0
+offset_left = -1036.0
+offset_top = 0.0
+offset_right = -524.0
+offset_bottom = 512.0
+
+[node name="Control3" type="Control" parent="Control/HBoxContainer"]
+layout_mode = 2
+
+[node name="Third" parent="Control/HBoxContainer/Control3" instance=ExtResource("1_pmkje")]
+layout_mode = 2
+anchors_preset = 0
+offset_left = -524.0
+offset_top = 286.0
+offset_right = -12.0
+offset_bottom = 798.0
+scale = Vector2(0.8, 0.8)

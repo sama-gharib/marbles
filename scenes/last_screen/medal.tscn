@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://q4c1r1ctg7v2"]
+
+[ext_resource type="PackedScene" uid="uid://pspkhc0u0ij8" path="res://medal.blend" id="1_s07g7"]
+[ext_resource type="Shader" path="res://winner_photo.gdshader" id="2_hbu4h"]
+[ext_resource type="Script" path="res://scripts/medal.gd" id="2_jfjx7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b468x"]
+render_priority = 0
+shader = ExtResource("2_hbu4h")
+
+[node name="medal" instance=ExtResource("1_s07g7")]
+script = ExtResource("2_jfjx7")
+
+[node name="Medal" parent="." index="0"]
+transform = Transform3D(-9.50235e-09, 0.0152409, 0, -0.058325, -2.48306e-09, 0, 0, 0, 0.058325, -1.51497, 0, 0)
+surface_material_override/1 = SubResource("ShaderMaterial_b468x")

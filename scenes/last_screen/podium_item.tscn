@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://daj7ib0b40ngm"]
+
+[ext_resource type="Script" path="res://scenes/last_screen/podium_item.gd" id="1_2tjx1"]
+[ext_resource type="PackedScene" uid="uid://q4c1r1ctg7v2" path="res://scenes/last_screen/medal.tscn" id="1_vroef"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3xyy3"]
+font_size = 64
+outline_size = 30
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4imn5"]
+font_size = 56
+outline_size = 30
+outline_color = Color(0, 0, 0, 1)
+
+[node name="PodiumItem" type="SubViewportContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2tjx1")
+
+[node name="First" type="SubViewport" parent="."]
+own_world_3d = true
+transparent_bg = true
+handle_input_locally = false
+size_2d_override = Vector2i(512, 512)
+render_target_update_mode = 4
+
+[node name="medal" parent="First" instance=ExtResource("1_vroef")]
+
+[node name="Title" type="Label" parent="."]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+text = "[Set by parent]"
+label_settings = SubResource("LabelSettings_3xyy3")
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 2
+
+[node name="Subtitle" type="Label" parent="Control"]
+layout_mode = 2
+offset_left = 59.0
+offset_top = 441.0
+offset_right = 456.0
+offset_bottom = 518.0
+text = "[Set by parent]"
+label_settings = SubResource("LabelSettings_4imn5")
+horizontal_alignment = 1

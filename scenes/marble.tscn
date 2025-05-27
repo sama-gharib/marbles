@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://7mqcaiumgphp"]
+[gd_scene load_steps=4 format=3 uid="uid://7mqcaiumgphp"]
 
 [ext_resource type="Script" path="res://scripts/marble.gd" id="1_cf7ap"]
+[ext_resource type="Script" path="res://scripts/pseudo.gd" id="2_2ld6l"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_oajiq"]
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Marble" type="RigidBody2D"]
 mass = 0.1
@@ -9,3 +14,22 @@ script = ExtResource("1_cf7ap")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
+
+[node name="Pseudo" type="Label" parent="."]
+custom_minimum_size = Vector2(96.055, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0275
+offset_top = -11.5
+offset_right = 48.0275
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Bot"
+label_settings = SubResource("LabelSettings_oajiq")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_2ld6l")

@@ -4,17 +4,18 @@
 [ext_resource type="PackedScene" uid="uid://m5hydshpcbi6" path="res://scenes/last_screen/confettis.tscn" id="2_6syhp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_abysf"]
-size = Vector2(668, 100)
+size = Vector2(668, 1152)
 
 [node name="FinishLine" type="StaticBody2D"]
 script = ExtResource("1_3s5j8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(324, 50)
+position = Vector2(324, 577)
 shape = SubResource("RectangleShape2D_abysf")
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
-polygon = PackedVector2Array(-10, 0, 658, 0, 658, 20, -10, 20)
+scale = Vector2(1, 57.6483)
+polygon = PackedVector2Array(-10, 0, 658, 0, 658, 20, 323.18, 20, -10, 20)
 
 [node name="Confettis" parent="." instance=ExtResource("2_6syhp")]
 scale = Vector2(3, 3)
