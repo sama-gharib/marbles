@@ -23,7 +23,7 @@ window/default_gravity=1.0
 
 [editor]
 
-movie_writer/movie_file="/home/sama/Bureau/Godot/marbles/output.avi"
+movie_writer/movie_file="/home/sama/Bureau/Godot/TikTokMinigames/marbles/output.avi"
 
 [physics]
 
